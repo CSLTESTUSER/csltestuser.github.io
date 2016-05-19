@@ -23,13 +23,6 @@ function setupRedirectWorkflow()
     		'success_redirect_url': 'http://csltestuser.github.io'
   			}
   		},
-  		headers : { 
-			'Access-Control-Allow-Headers' : 'Content-Type,GoCardless-Version,Authorization',
-			'Content-Type' :'application/json',
-			'GoCardless-Version':'2015-07-06',
-			'Authorization':'Bearer U15KDpAy1-TrD7ebm4h8oe5LaCx_f8HdAoQbSmC8'
-
-		},
   		success :function(response){
   			console.log(response);
   		},
