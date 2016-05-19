@@ -28,6 +28,7 @@ function setupRedirectWorkflow()
 			xhr.setRequestHeader("Content-Type","application/json");
 			xhr.setRequestHeader("GoCardless-Version","2015-07-06");
 			xhr.setRequestHeader("Authorization","Bearer U15KDpAy1-TrD7ebm4h8oe5LaCx_f8HdAoQbSmC8");
+			alert('ok');
 			console.log(xhr);
 		}, 
   		success :function(response){
