@@ -27,9 +27,9 @@ function setupRedirectWorkflow()
   		success :function(response){
   			console.log(response);
   		},
-  		error:function(reponse){
-  			console.log(response);
-  		}
+  		error:function(jqXHR, textStatus, errorThrown) {
+  			console.log(textStatus, errorThrown);
+		}
 	});
 }
 
