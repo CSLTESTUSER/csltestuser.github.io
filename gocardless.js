@@ -24,7 +24,7 @@ function setupRedirectWorkflow()
     		'success_redirect_url': 'http://csltestuser.github.io'
   			}
   		},
-  		beforesend:function(xhr){
+  		beforeSend:function(xhr){
 			xhr.setRequestHeader("Content-Type","application/json");
 			xhr.setRequestHeader("GoCardless-Version","2015-07-06");
 			xhr.setRequestHeader("Authorization","Bearer U15KDpAy1-TrD7ebm4h8oe5LaCx_f8HdAoQbSmC8");
