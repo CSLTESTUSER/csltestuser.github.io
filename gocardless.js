@@ -1,7 +1,5 @@
 
 
-
-
 $(function(){
 
 	$('#setupmandate').on('click',function(){
@@ -10,10 +8,9 @@ $(function(){
 	});
 });
 
+
 function setupRedirectWorkflow()
 {
-
-
 	$.ajax({ 
 		method:'POST',
 		url:'https://api-sandbox.gocardless.com/redirect_flows',
@@ -24,18 +21,19 @@ function setupRedirectWorkflow()
     		'success_redirect_url': 'http://csltestuser.github.io'
   			}
   		},
-  		beforeSend:function(xhr){
-			//xhr.setRequestHeader("Content-Type","application/json");
-			//xhr.setRequestHeader("GoCardless-Version","2015-07-06");
-			//xhr.setRequestHeader("Authorization","Bearer U15KDpAy1-TrD7ebm4h8oe5LaCx_f8HdAoQbSmC8");
-			//console.log(xhr);
-		}, 
-  		success :function(response){
-  			alert(response);
+  		headers : { 
+  			'Accept': 'text/plain',
+  			'Authorization':'Bearer U15KDpAy1-TrD7ebm4h8oe5LaCx_f8HdAoQbSmC8',
+			'Content-Type' :'application/json',
+			'Origin':'http://csltestuser.github.io',
+			'GoCardless-Version':'2015-07-06'
+		},
+  		success :function(jqXHR, textStatus, errorThrown){
+  			alert(textStatus);
   		},
-  		error:function(jqXHR, textStatus, errorThrown) {
-  			console.log(jqXHR);
-		}
+  		error:function(jqXHR, textStatus, errorThrown){
+  			alert(textStatus);
+  		}
 	});
 }
 
